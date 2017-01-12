@@ -1,31 +1,47 @@
 package uk.org.windswept.awsplaypen.lambda.handler;
 
+import java.util.List;
+
 /**
  * Created by 802998369 on 12/01/2017.
  */
 public class HelloWorldResponse
 {
-    private String value;
+    private int          statusCode;
+    private List<Header> headers;
+    private String       body;
 
-    public HelloWorldResponse(String value)
+
+    public HelloWorldResponse(int statusCode, String body)
     {
-        this.value = value;
+        this.statusCode = statusCode;
+        this.body = body;
     }
 
-    public void setValue(String value)
+    public int getStatusCode()
     {
-        this.value = value;
+        return statusCode;
     }
 
-    public String getValue()
+    public void setStatusCode(int statusCode)
     {
-        return value;
+        this.statusCode = statusCode;
+    }
+
+    public String getBody()
+    {
+        return body;
+    }
+
+    public void setBody(String body)
+    {
+        this.body = body;
     }
 
     @Override
     public String toString()
     {
-        return value;
+        return body;
     }
 
 }

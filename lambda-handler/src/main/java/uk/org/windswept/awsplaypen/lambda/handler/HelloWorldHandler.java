@@ -16,6 +16,6 @@ public class HelloWorldHandler implements RequestHandler<HelloWorldRequest, Hell
     public HelloWorldResponse handleRequest(HelloWorldRequest input, Context context)
     {
         LOGGER.info("handleRequest input:{} context:{}", input, context);
-        return new HelloWorldResponse("Hello " + input);
+        return new HelloWorldResponse(200, "Hello " + input);
     }
 }

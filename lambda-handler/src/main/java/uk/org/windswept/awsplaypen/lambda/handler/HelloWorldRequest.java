@@ -5,6 +5,7 @@ package uk.org.windswept.awsplaypen.lambda.handler;
  */
 public class HelloWorldRequest
 {
+    // TODO need to make this be like teh HTTP request structure https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-set-up-simple-proxy.html#api-gateway-simple-proxy-for-lambda-output-format
     private String value;
 
     public HelloWorldRequest()
