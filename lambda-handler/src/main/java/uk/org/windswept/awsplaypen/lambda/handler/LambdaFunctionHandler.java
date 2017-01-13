@@ -9,13 +9,13 @@ import org.slf4j.LoggerFactory;
 /**
  * Created by 802998369 on 12/01/2017.
  */
-public class HelloWorldHandler implements RequestHandler<HelloWorldRequest, HelloWorldResponse>
+public class LambdaFunctionHandler implements RequestHandler<LambdaFunctionRequest, LambdaFunctionResponse>
 {
-    static final Logger LOGGER = LoggerFactory.getLogger(HelloWorldHandler.class);
+    static final Logger LOGGER = LoggerFactory.getLogger(LambdaFunctionHandler.class);
 
-    public HelloWorldResponse handleRequest(HelloWorldRequest input, Context context)
+    public LambdaFunctionResponse handleRequest(LambdaFunctionRequest input, Context context)
     {
         LOGGER.info("handleRequest input:{} context:{}", input, context);
-        return new HelloWorldResponse("Hello " + input);
+        return new LambdaFunctionResponse(200, "Hello " + input.getBody());
     }
 }

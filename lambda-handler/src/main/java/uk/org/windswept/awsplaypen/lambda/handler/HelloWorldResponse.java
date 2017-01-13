@@ -7,41 +7,20 @@ import java.util.List;
  */
 public class HelloWorldResponse
 {
-    private int          statusCode;
-    private List<Header> headers;
-    private String       body;
+    private String       value;
 
-
-    public HelloWorldResponse(int statusCode, String body)
+    public HelloWorldResponse(String value)
     {
-        this.statusCode = statusCode;
-        this.body = body;
+        this.value = value;
     }
 
-    public int getStatusCode()
+    public String getValue()
     {
-        return statusCode;
+        return value;
     }
 
-    public void setStatusCode(int statusCode)
+    public void setValue(String value)
     {
-        this.statusCode = statusCode;
+        this.value = value;
     }
-
-    public String getBody()
-    {
-        return body;
-    }
-
-    public void setBody(String body)
-    {
-        this.body = body;
-    }
-
-    @Override
-    public String toString()
-    {
-        return body;
-    }
-
 }
