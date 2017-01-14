@@ -7,3 +7,7 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
+aws-playpen.iml
+aws-playpen.ipr
+aws-playpen.iws
+lambda-handler/aws-playpen-lambda-handler.iml
